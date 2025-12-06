@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Clarence Galay | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="profile-card">
+            <div class="profile-img-container">
+                <img src="{% static 'images/profile.jpg' %}" alt="Profile" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h1>John Clarence Galay</h1>
+                <p>Web Developer | Python Enthusiast | Designer</p>
+                <p>Creating beautiful and functional web experiences.</p>
+            </div>
+        </div>
+
+        <div class="action-area">
+            <div class="line"></div>
+            <a href="{% url 'view' %}" class="btn-view">VIEW</a>
+            <div class="line"></div>
+        </div>
+
+        <a href="{% url 'projects' %}" class="projects-link">
+            <div class="projects-section">
+                <h2>My Projects</h2>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

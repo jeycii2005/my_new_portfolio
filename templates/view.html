@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>More About Me</h1>
+        <p>Detailed information goes here.</p>
+        <a href="{% url 'home' %}" class="btn-view">Back Home</a>
+    </div>
+</body>
+</html>
