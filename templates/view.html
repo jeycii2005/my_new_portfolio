@@ -1,16 +1,26 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Details</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div class="container">
-        <h1>More About Me</h1>
-        <p>Detailed information goes here.</p>
-        <a href="{% url 'home' %}" class="btn-view">Back Home</a>
+{% block title %}About John Clarence{% endblock %}
+
+{% block content %}
+
+    <h1 style="text-align: center; margin-bottom: 30px;">Get to Know Me Better</h1>
+
+    <div class="profile-card" style="display: block; padding: 30px;">
+        <h2 style="color: var(--accent); margin-top: 0;">Who I Am</h2>
+        <p>I am John Clarence, a passionate Web Developer with 3 years of experience creating robust and secure web applications using **Python and Django**. I believe that code must not only function correctly but also be clean, scalable, and easy to maintain.</p>
+
+        <h2 style="color: var(--accent); margin-top: 20px;">Skills & Tools</h2>
+        <ul style="list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px;">
+            <li style="background: #334155; padding: 8px 15px; border-radius: 5px;">Python (Django/DRF)</li>
+            <li style="background: #334155; padding: 8px 15px; border-radius: 5px;">HTML5 / CSS3 / JavaScript</li>
+            <li style="background: #334155; padding: 8px 15px; border-radius: 5px;">SQL / PostgreSQL</li>
+            <li style="background: #334155; padding: 8px 15px; border-radius: 5px;">Git & GitHub</li>
+            <li style="background: #334155; padding: 8px 15px; border-radius: 5px;">Deployment (Render/AWS)</li>
+        </ul>
+
+        <h2 style="color: var(--accent); margin-top: 20px;">Contact</h2>
+        <p>For job opportunities or collaborations, you may reach me at: <a href="mailto:johnclarence.developer@email.com" style="color: var(--accent);">johnclarence.developer@email.com</a></p>
     </div>
-</body>
-</html>
+
+{% endblock %}

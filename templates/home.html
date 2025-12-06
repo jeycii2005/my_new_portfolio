@@ -1,40 +1,30 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Clarence Galay | Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% block title %}Home | John Clarence Galay{% endblock %}
 
-    <div class="container">
-        
-        <div class="profile-card">
-            <div class="profile-img-container">
-                <img src="{% static 'images/profile.jpg' %}" alt="Profile" class="profile-img">
-            </div>
-            <div class="profile-info">
-                <h1>John Clarence Galay</h1>
-                <p>Web Developer | Python Enthusiast | Designer</p>
-                <p>Creating beautiful and functional web experiences.</p>
-            </div>
+{% block content %}
+
+    <div class="profile-card">
+        <div class="profile-img-container">
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile" class="profile-img">
         </div>
-
-        <div class="action-area">
-            <div class="line"></div>
-            <a href="{% url 'view' %}" class="btn-view">VIEW</a>
-            <div class="line"></div>
+        <div class="profile-info">
+            <h1>John Clarence Galay</h1>
+            <p>Web Application Developer | Full-Stack Enthusiast | UI/UX Focused</p>
+            <p style="color: var(--accent);">"Transforming complex ideas into sleek, scalable web solutions using Django."</p>
         </div>
-
-        <a href="{% url 'projects' %}" class="projects-link">
-            <div class="projects-section">
-                <h2>My Projects</h2>
-            </div>
-        </a>
-
     </div>
 
-</body>
-</html>
+    <div class="action-area">
+        <div class="line"></div>
+        <a href="{% url 'view' %}" class="btn-view">VIEW PROFILE</a>
+        <div class="line"></div>
+    </div>
+
+    <a href="{% url 'projects' %}" class="projects-link">
+        <div class="projects-section">
+            <h2>MY FEATURED PROJECTS</h2>
+        </div>
+    </a>
+
+{% endblock %}

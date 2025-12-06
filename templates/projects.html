@@ -1,16 +1,31 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div class="container">
-        <h1>My Project Gallery</h1>
-        <p>This is where your projects will appear.</p>
-        <a href="{% url 'home' %}" class="btn-view">Back Home</a>
+{% block title %}My Projects{% endblock %}
+
+{% block content %}
+
+    <h1 style="text-align: center; margin-bottom: 40px;">Projects & Portfolio</h1>
+
+    <div class="project-grid">
+        
+        <div class="project-item">
+            <h3>Django E-Commerce Platform</h3>
+            <p>A full-featured online store with payment integration (Stripe/PayPal), user authentication, and a custom admin panel. Built using **PostgreSQL** and **Celery** for asynchronous tasks.</p>
+            <p style="color: var(--text-sub); margin-top: 15px;">**Tech Stack:** Django, Python, Bootstrap 5, PostgreSQL</p>
+        </div>
+
+        <div class="project-item">
+            <h3>RESTful API for Inventory System</h3>
+            <p>Designed and built a robust API using the **Django REST Framework (DRF)** for real-time inventory tracking and management for a logistics company.</p>
+            <p style="color: var(--text-sub); margin-top: 15px;">**Tech Stack:** DRF, JSON, SQLite, OAuth2</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Portfolio Website V2</h3>
+            <p>A minimalist, dark-themed portfolio site, optimized for mobile responsiveness. Designed to showcase strong skills in **front-end design and back-end integration**.</p>
+            <p style="color: var(--text-sub); margin-top: 15px;">**Tech Stack:** Django Templates, Custom CSS/SASS, Gunicorn, Render</p>
+        </div>
+        
     </div>
-</body>
-</html>
+
+{% endblock %}
